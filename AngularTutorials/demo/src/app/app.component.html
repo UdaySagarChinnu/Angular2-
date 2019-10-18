@@ -1,0 +1,14 @@
+<h4>Welcome To {{title}}</h4>
+
+<div class="row">
+  <div class="col-md-12">
+    <app-server (defaultServer)="newDefaultServer($event)"
+                (bluePrinttServer)="newBluePrintServer($event)"></app-server>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <app-main-server *ngFor="let element of serverArray"></app-main-server>
+  </div>
+</div>

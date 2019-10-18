@@ -1,0 +1,11 @@
+<p>main-server works!</p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{element.name}}
+    </div>
+    <div class="panel-body">
+        <p *ngIf="element.type ==='defultServer'" styel='color:red'>{{element.content}}</p>
+        <p *ngIf="element.type ==='bluePrintServer'" styel='color:blue'>{{element.content}}</p>
+    </div>
+
+</div>
