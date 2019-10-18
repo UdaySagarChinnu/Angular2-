@@ -1,0 +1,20 @@
+<div class="container">
+
+    
+<div class="row">
+        <div class="col-md-12">
+            <app-server (servercreated)="NewServer($event)"
+                        (blueprintcreated)="NewServerBluePrint($event)"
+                        ></app-server>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-12">
+                    <app-servers *ngFor="let serverElement of newAddedServer" [element]="serverElement">
+                        <p *ngIf="serverElement.type === 'Server'" style="color:red;font-weight: bold;" >{{serverElement.content}}</p>
+                        <p *ngIf="serverElement.type === 'BluePrint'" style="color:Blue;font-weight:bold;font-style: italic;" >{{serverElement.content}}</p>
+                    </app-servers>
+            </div>
+        </div>
+    
+</div>

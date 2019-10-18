@@ -1,0 +1,42 @@
+<p>server works!</p>
+
+<button class="btn btn-primary" (click)="onAdd()">Add Server</button>
+
+<ul class="list-group" >
+    <li class="list-group-item" *ngFor="let ser of server;let i = index" (click)="onRemove(i)">{{ser}}</li>
+</ul>
+
+<div class="row">
+    <div class="col-md-12">
+       
+        <div class="row">
+            <div class="col-md-12">
+                <label for="name">Server Name</label>
+                <!-- <input type="text" name="name" [(ngModel)]="newServerName" id="name" class="form-control"> -->
+                <input type="text" name="name" #newServerName id="name" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-12">
+                    <label for="content">Server Content</label>
+                    <!-- <input type="text" name="content" [(ngModel)]="newServerContent" id="content" class="form-control"> -->
+                    <input type="text" name="content" #newServerContent id="content" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-1">
+                        <br/>
+                            <!-- <button class="btn btn-primary" (click)="addNewServer()">AddServer</button> -->
+                            <!-- <button class="btn btn-primary" (click)="addNewServer(newServerName,newServerContent)">AddServer</button> -->
+                            <button class="btn btn-primary" (click)="addNewServer()">AddServer</button>
+                        </div>
+                        <div class="col-md-1">
+                                <br/>
+                                    <!-- <button class="btn btn-primary" (click)="addNewServerBluePrint()">AddBluePrint</button> -->
+                                    <!-- <button class="btn btn-primary" (click)="addNewServerBluePrint(newServerName,newServerContent)">AddBluePrint</button> -->
+                                    <button class="btn btn-primary" (click)="addNewServerBluePrint()">AddBluePrint</button>
+                                </div>
+            </div>
+    </div>
+   
+</div>
