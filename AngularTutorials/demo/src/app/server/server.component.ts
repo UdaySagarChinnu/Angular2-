@@ -22,7 +22,8 @@ export class ServerComponent implements OnInit {
 
 
   addDefaultServer = ()=>{
-
+    console.log("name",this.servername)
+    console.log("content",this.servercontent)
    this.defaultServer.emit({name:this.servername,content:this.servercontent})
     
   }

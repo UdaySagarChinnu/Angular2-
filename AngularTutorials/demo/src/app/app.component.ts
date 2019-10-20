@@ -8,18 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'demo';
 
-  serverArray :any[]=[];
+  serverArray :any[]=[{type:'defultServer',name:"ser1",content:"111"}];
 
-  newDefaultServer = (serverData : {name:string,content:string})=>{
-    console.log("serverdata :"+serverData)
+  newDefaultServer(serverData : {name:string,content:string}){
+    console.log("serverdata :"+serverData);
     this.serverArray.push({
       type:"defultServer",
       name:serverData.name,
       content:serverData.content
     })
+    console.log("this.serverArray :"+this.serverArray)
   }
 
-  newBluePrintServer = (bluePrint : {name:string,content:string})=>{
+  newBluePrintServer(bluePrint : {name:string,content:string}){
     this.serverArray.push({
       type:"bluePrintServer",
       name:bluePrint.name,
