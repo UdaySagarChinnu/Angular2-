@@ -2,23 +2,25 @@
 <div class="row">
     <div class="col-md-12">
         <label>ServerName</label>
-        <input type="text" name="servername" [(ngModel)]="servername" class="form-control">
+        <!-- <input type="text" name="servername" [(ngModel)]="servername" class="form-control"> -->
+        <input type="text" name="servername" #servername class="form-control">
     </div>
 </div>
 <div class="row">
     <div class="col-md-12">
         <label>ServerContent</label>
-        <input type="text" name="servercontent" [(ngModel)]="servercontent" class="form-control">
+        <!-- <input type="text" name="servercontent" [(ngModel)]="servercontent" class="form-control"> -->
+        <input type="text" name="servercontent" #servercontent class="form-control">
 
     </div>
 </div>
 <br/>
 <div class="row">
     <div class="col-md-2">
-        <button class="btn btn-default" (click)="addDefaultServer()">AddDefaultServer</button>
+        <button class="btn btn-default" (click)="addDefaultServer(servername,servercontent)">AddDefaultServer</button>
     </div>
     <div class="col-md-2">
-        <button class="btn btn-primary" (click)="addBluePrinttServer()">AddBluePrintServer</button>
+        <button class="btn btn-primary" (click)="addBluePrinttServer(servername,servercontent)">AddBluePrintServer</button>
     </div>
 </div>
 

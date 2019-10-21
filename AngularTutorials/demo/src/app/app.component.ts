@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'demo';
 
-  serverArray :any[]=[{type:'defultServer',name:"ser1",content:"111"}];
+  serverArray :any[]=[];
 
   newDefaultServer(serverData : {name:string,content:string}){
     console.log("serverdata :"+serverData);

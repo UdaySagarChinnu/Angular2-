@@ -9,6 +9,9 @@
 
 <div class="row">
   <div class="col-md-12">
-    <app-main-server *ngFor="let element of serverArray" [element]="element"></app-main-server>
+    <app-main-server *ngFor="let element of serverArray" [element]="element">
+      <p *ngIf="element.type === 'defultServer'" style='color:red;font-weight: bold;'>{{element.content}}</p>
+        <p *ngIf="element.type === 'bluePrintServer'" style='color:blue;font-weight: bold;font-style: italic;'>{{element.content}}</p>
+    </app-main-server>
   </div>
 </div>

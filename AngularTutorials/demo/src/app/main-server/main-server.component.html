@@ -4,8 +4,7 @@
         {{ele.name}}
     </div>
     <div class="panel-body">
-        <p *ngIf="ele.type === 'defultServer'" style='color:red'>{{ele.content}}</p>
-        <p *ngIf="ele.type === 'bluePrintServer'" style='color:blue'>{{ele.content}}</p>
+        <ng-content></ng-content>
     </div>
 
 </div>

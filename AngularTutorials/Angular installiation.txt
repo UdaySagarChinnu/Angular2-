@@ -1,0 +1,38 @@
+Angular Installations :
+
+1)Download and install node
+2)open cmd
+3)check node version: node --version
+4)install angular: npm install -g @angular/cli
+  Specific version : npm install -g @angular/cli@6.1.1
+5)CLI - command line interface
+6)check angular version: ng --version
+7)To create new Angular Application: ng new (applicationname)
+8)To run angular application: ng serve -o
+
+uninstall Angular:
+
+1)npm uninstall -g @angular/cli
+2)npm cache clean (--f)
+3)npm cache verify
+4)npm install -g @angular/cli@wished.version.here
+5)ng new you-app-name
+
+Installing Typescript:
+
+1)To install typescript: npm install -g typescript.
+2)To check typescript version: tsc --version
+3)To compile typescript(tsc) file: tsc (filename.ts)
+4)To run typescript file: node (filename.js)
+
+Angular-cli:
+
+0)To create new Angular Application: ng new (applicationname)
+1)Creating component using cli: ng generate component (componentname)/ng g c (componentname)
+2)Creating services using cli: ng g s (servicename)/ng generate service (servicename)
+3)install bootstrap:npm install bootstrap --save
+4)import bostrap in style.css: @import "~bootstrap/dist/css/bootstrap.css"/path
+5)to install particular version: npm install bootstrap@3.3.1 --save
+6)to create a directive:ng g d (directivename)
+
+
