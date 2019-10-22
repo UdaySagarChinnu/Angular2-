@@ -5,6 +5,8 @@
 </div>
 <div class="row">
         <div class="col-md-12">
-            <h5>The List</h5>
+         <div class="list-group">
+             <span class="clearfix list-group-item" *ngFor="let item of ingridents">{{item.name}}--{{item.amount}}</span>
+         </div>
         </div>
     </div>
