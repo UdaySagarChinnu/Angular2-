@@ -1,1 +1,10 @@
-<p>recipe-item works!</p>
+
+        <div class="card" (click)="onItemSelect(item)">
+            <img [src]="item.image" alt="image" class="card-img-top" style="height:100px;">
+            
+            <div class="card-body">
+                    
+                <div class="card-title"><small>{{item.name}}</small></div>
+                <div class="card-text">{{item.description}}</div>
+            </div>
+        </div>

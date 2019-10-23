@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo-Project';
+  loadPage:string = "recipe";
+
+  onNavigate(option:string)
+  {
+    this.loadPage = option;
+  }
 }

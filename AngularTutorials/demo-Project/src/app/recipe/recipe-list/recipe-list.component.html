@@ -1,22 +1,10 @@
 <div class="row">
     <div class="col-md-12">
         <div class="row">
-            <div class="col-md-4 mt-4" *ngFor="let item of recipeList">
-                <div class="card">
-                    <img [src]="item.image" alt="image" class="card-img-top" style="height:100px;">
-                    
-                    <div class="card-body">
-                            
-                        <span class="card-title"><small>{{item.name}}</small></span>
-                        <div class="card-text">{{item.description}}</div>
-                    </div>
+            <div class="col-md-4 mt-4" *ngFor="let items of recipeList">
+                <app-recipe-item  [item]="items"></app-recipe-item>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <app-recipe-item></app-recipe-item>
-    </div>
-</div>
+
