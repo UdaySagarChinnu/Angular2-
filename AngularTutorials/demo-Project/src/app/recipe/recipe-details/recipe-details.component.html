@@ -1,4 +1,18 @@
-<div>details</div>
+<div class="row mt-5">
+    <div class="col-md-6">
+      
+        <!-- <img [src]="itemEl.image" class="imgSize"  height="200px" (mouseover)="zoom()" *ngIf="imgFlag"> -->
+        
+        <span>
+            <ngx-image-zoom  
+            [thumbImage]=itemEl.image
+            [fullImage]=itemEl.image
+            [magnification]="2"
+            [width]="500"
+        ></ngx-image-zoom>
+        </span>
+    </div>
+</div>
 <div class="row mt-5">
     <div class="col-md-12">
         <span><h4>{{itemEl.name}}</h4></span>

@@ -8,10 +8,26 @@ import { Recipe } from './../recipe.model';
   styleUrls: ['./recipe-details.component.css']
 })
 export class RecipeDetailsComponent implements OnInit {
-@Input() itemEl:Recipe
+@Input() itemEl:Recipe;
+
+imageFlag = false;
+imgFlag = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  zoom()
+  {
+    this.imageFlag = true;
+    this.imgFlag = false;
+  }
+
+  zoomOut()
+  {
+    this.imageFlag = false;
+    this.imgFlag = true;
   }
 
 }
