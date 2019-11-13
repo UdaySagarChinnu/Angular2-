@@ -7,6 +7,7 @@
   </div>
 </div>
 <p appBasicdirective>Click on Buttons to check difference in servers</p>
+<p appBasichighlightdirective [highlight]="'lightblue'" [downlighted]="'lightgrey'">Click on Buttons to check difference in servers</p>
 <div class="row">
   <div class="col-md-12">
     <app-main-server *ngFor="let element of serverArray" [element]="element">
