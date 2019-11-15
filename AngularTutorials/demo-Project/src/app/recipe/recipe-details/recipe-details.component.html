@@ -8,8 +8,8 @@
             [thumbImage]=itemEl.image
             [fullImage]=itemEl.image
             [magnification]="2"
-           
-        ></ngx-image-zoom>
+            >
+            </ngx-image-zoom>
         </span>
     </div>
 </div>
@@ -20,11 +20,16 @@
 </div>
 <div class="row">
         <div class="col-md-12">
-            <button class="btn btn-warning dropdown-toggle">Manage <span calss="caret"></span></button>
-            <div class="dropdown-menu">
-                <a href="#" class="link-text">To Shopping</a>
-                <a href="#" class="link-text">Edit Recipe</a>
-                <a href="#" class="link-text">Delete Recipe</a>
+               
+            <div class="btn-group" appDropdown>
+                <button type="button" class="btn btn-warning dropdown-toggle"  >Manage Recipe <span class="caret"></span></button>
+               
+                    <ul   class="dropdown-menu text-center">
+                        <li appBackgroundcolor><a href="#" appBackgroundcolor>To Shopping List</a></li>
+                        <li appBackgroundcolor><a href="#" appBackgroundcolor>Edit Recipe</a></li>
+                        <li appBackgroundcolor><a href="#" appBackgroundcolor>Delete Recipe</a></li>
+                    </ul>
+                
             </div>
         </div>
     </div>
