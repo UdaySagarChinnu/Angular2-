@@ -1,0 +1,25 @@
+<p>new-account works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <label for="accountname"> AccountType :</label>
+        <input type="text" name="accountname" id="accountname" #accountname class="form-control">
+    </div>
+</div>
+<div class="row mb-2">
+        <div class="col-md-12">
+            <label for="accountname">Status :</label>
+            <select class="form-control" name="accountstatus" id="accountstatus" #accountstatus>
+                <option value="">Select</option>
+                <option value="Active">Active</option>
+                <option value="InActive">InActive</option>
+                <option value="Block">Block</option>
+            </select>
+            
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-md-12">
+               <button class="btn btn-primary" (click)="accountSubmit()">Submit</button>
+            </div>
+        </div>

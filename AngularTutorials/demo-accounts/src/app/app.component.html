@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <app-new-account (account)="addAccount($event)" (status)="updateStatus($event)"></app-new-account>
+        </div>
+      </div>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <app-accounts (accountStatus)="updateStatus($event)" *ngFor="let item of addBankAccount; let i = index" [items]="item" [id]="i"></app-accounts>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<p>accounts works!</p>
+<div class="row mt-3">
+        <div class="col-md-12">
+            <div class="card " >
+                <div class="card-header bg-dark text-white">
+                    {{items.name}}
+                </div>
+                <div class="card-body">
+                    <p>This Account is {{items.status}}</p>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" (click)="updatestatus('Active')">Active</button>
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-secondary" (click)="updatestatus('Inactive')">InActive</button>
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-danger" (click)="updatestatus('Blocked')">Blocked</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
