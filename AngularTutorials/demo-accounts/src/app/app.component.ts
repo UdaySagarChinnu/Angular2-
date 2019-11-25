@@ -1,25 +1,35 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AccountModel } from './shared/account.model'
+import { AccountServiceService } from './services/account-service.service'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'demo-accounts';
   
   addBankAccount :AccountModel[]=[];
+  constructor(public accountsinstance : AccountServiceService){
 
+    
 
+  }
+
+ngOnInit(){
+  this.addBankAccount = this.accountsinstance.bankAccounts;
+}
   addAccount(one)
   {
-    
-    this.addBankAccount.push(one);
-    
+    this.accountsinstance.addAccount(one);
   }
-  updateStatus(event:{id:number,newStatus:string})
-  {
-    this.addBankAccount[event.id].status=event.newStatus;
+  // updateStatus(event)
+  // {
+  //   this.addBankAccount[event.id].status=event.newStatus;
+  // }
+
+  updateStatus(event){
+    this.accountsinstance.updateAccount(event);
   }
 }

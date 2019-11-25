@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, Output, ElementRef,EventEmitter } from '@angular/core';
+import { AccountServiceService } from '../services/account-service.service';
 
 
 
@@ -15,16 +16,23 @@ export class NewAccountComponent implements OnInit {
 @ViewChild("accountname",{static:false}) accountname:ElementRef;
 @ViewChild("accountstatus",{static:false}) accountstatus:ElementRef;
 
-  constructor() { }
+  constructor(public addNewAccount:AccountServiceService) { }
 
   ngOnInit() {
   }
 
+  // accountSubmit(){
+  //   this.account.emit({name:this.accountname.nativeElement.value,status:this.accountstatus.nativeElement.value});
+  //   this.accountname.nativeElement.value = "";
+  //   this.accountstatus.nativeElement.value = "";
+      
+  // }
+
   accountSubmit(){
-    this.account.emit({name:this.accountname.nativeElement.value,status:this.accountstatus.nativeElement.value});
+    let newAccount = {name:this.accountname.nativeElement.value,status:this.accountstatus.nativeElement.value};
+    this.addNewAccount.addAccount(newAccount);
     this.accountname.nativeElement.value = "";
     this.accountstatus.nativeElement.value = "";
-      
   }
 
 }
