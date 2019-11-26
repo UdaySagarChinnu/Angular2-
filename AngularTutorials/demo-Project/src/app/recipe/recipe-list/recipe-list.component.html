@@ -2,7 +2,8 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-4 mt-4" *ngFor="let items of recipeList">
-                <app-recipe-item  [item]="items" (selectedItem)="element(items)"></app-recipe-item>
+                <!-- <app-recipe-item  [item]="items" (selectedItem)="element(items)"></app-recipe-item> -->
+                <app-recipe-item  [item]="items"></app-recipe-item>
                 </div>
             </div>
         </div>
