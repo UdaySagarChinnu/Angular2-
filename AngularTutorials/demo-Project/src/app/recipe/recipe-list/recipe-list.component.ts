@@ -17,10 +17,10 @@ export class RecipeListComponent implements OnInit {
 //                       {name:"Gova",description:"Fruit",image:"../assets/images/guava_copy.jpg"}];
 
 recipeList:Recipe[];
-  constructor( public recipes: RecipeServiceService) { }
+  constructor( public recipeservice: RecipeServiceService) { }
 
   ngOnInit() {
-    this.recipeList = this.recipes.recipeList;
+    this.recipeList = this.recipeservice.getRecipeList();
   }
 
   // element(items:Recipe){

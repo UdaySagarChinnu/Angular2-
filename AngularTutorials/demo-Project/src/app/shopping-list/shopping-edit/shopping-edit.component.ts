@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Ingridents } from './../../shared/Ingridents.model';
+import { ShoppingServiceService } from '../shopping-service.service';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -8,25 +9,28 @@ import { Ingridents } from './../../shared/Ingridents.model';
 })
 export class ShoppingEditComponent implements OnInit {
 
-  @Output() cartList = new EventEmitter<{name:string,amount:string}>();
+  //@Output() cartList = new EventEmitter<{name:string,amount:string}>();
 
   @ViewChild("nameInput",{static:false})nameInput:ElementRef;
   @ViewChild("amountInput",{static:false})amountInput:ElementRef;
 
 
-  constructor() { }
+  constructor(private shoppingservice : ShoppingServiceService) { }
 
   ngOnInit() {
   }
 
   addToShoppingCart(){
    
-    console.log(this.nameInput.nativeElement.value);
+    //console.log(this.nameInput.nativeElement.value);
     if(this.nameInput.nativeElement.value !=="" && this.amountInput.nativeElement.value !== "")
     {
-    this.cartList.emit({name:this.nameInput.nativeElement.value,amount:this.amountInput.nativeElement.value})
-    this.nameInput.nativeElement.value="";
-    this.amountInput.nativeElement.value="";
+      this.shoppingservice.addIngridents({name:this.nameInput.nativeElement.value,amount:this.amountInput.nativeElement.value})
+      //this.cartList.emit({name:this.nameInput.nativeElement.value,amount:this.amountInput.nativeElement.value})
+      
+
+      this.nameInput.nativeElement.value="";
+      this.amountInput.nativeElement.value="";
     }
 
   }
