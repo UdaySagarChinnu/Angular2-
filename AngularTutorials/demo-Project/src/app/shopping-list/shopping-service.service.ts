@@ -22,4 +22,10 @@ export class ShoppingServiceService {
     this.ingridents.push(newingridents)
     this.changeedIngrident.emit(this.ingridents.slice())
   }
+
+  addSelectedIngridents(newingridents : Ingridents[]){
+    console.log("inside :",newingridents)
+    this.ingridents.push(...newingridents);
+    this.changeedIngrident.emit(this.ingridents.slice());
+  }
 }

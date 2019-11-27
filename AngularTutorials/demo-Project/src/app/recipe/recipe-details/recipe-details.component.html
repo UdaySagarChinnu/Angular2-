@@ -25,7 +25,7 @@
                 <button type="button" class="btn btn-warning dropdown-toggle"  >Manage Recipe <span class="caret"></span></button>
                
                     <ul   class="dropdown-menu text-center">
-                        <li appBackgroundcolor><a href="#" appBackgroundcolor>To Shopping List</a></li>
+                        <li appBackgroundcolor><a (click)="addIngridents(itemEl.ingridents)" appBackgroundcolor>To Shopping List</a></li>
                         <li appBackgroundcolor><a href="#" appBackgroundcolor>Edit Recipe</a></li>
                         <li appBackgroundcolor><a href="#" appBackgroundcolor>Delete Recipe</a></li>
                     </ul>
@@ -35,8 +35,9 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <span class="clearfix">Description</span>
-            <span class="clearfix">Ingredients</span>
+           <ul class="list">
+               <li class="list-item" *ngFor="let list of itemEl.ingridents" >{{list.name}}--{{list.amount}}</li>
+           </ul>
 
         </div>
     </div>

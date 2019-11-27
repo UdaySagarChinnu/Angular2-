@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Recipe } from './../recipe.model';
+import {ShoppingServiceService} from '../../shopping-list/shopping-service.service';
+import { Ingridents } from 'src/app/shared/Ingridents.model';
 
 @Component({
   selector: 'app-recipe-details',
@@ -13,7 +15,7 @@ export class RecipeDetailsComponent implements OnInit {
 imageFlag = false;
 imgFlag = true;
 
-  constructor() { }
+  constructor(private shoppingservice:ShoppingServiceService) { }
 
   ngOnInit() {
   }
@@ -28,6 +30,13 @@ imgFlag = true;
   {
     this.imageFlag = false;
     this.imgFlag = true;
+  }
+
+  addIngridents(ingrident:Ingridents[]){
+    console.log("details:",ingrident)
+    this.shoppingservice.addSelectedIngridents(ingrident);
+
+
   }
 
 }
