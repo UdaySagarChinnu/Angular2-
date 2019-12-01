@@ -12,9 +12,10 @@ import { ServerComponent } from './Servers/server/server.component';
 
 const appRoutes:Routes=[
   {path:'', component:HomeComponent},
-  {path:'Users', component:UsersComponent},
-  {path:'Servers', component:ServersComponent},
-  {path:'User', component:UserComponent}
+  {path:'Users', component:UsersComponent,children:[{path:':id/:name', component:UserComponent}]},
+  
+  {path:'Servers', component:ServersComponent,children:[{path:'Server', component:ServerComponent}]},
+    
 ]
 
 
