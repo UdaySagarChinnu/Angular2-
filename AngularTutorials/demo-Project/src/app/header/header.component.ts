@@ -7,13 +7,10 @@ import { Component, OnInit ,EventEmitter, Output} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() loadingOption = new EventEmitter<string>();
+ 
   constructor() { }
 
   ngOnInit() {
   }
-  onSelect(option:string){
-   
-    this.loadingOption.emit(option);
-  }
+  
 }

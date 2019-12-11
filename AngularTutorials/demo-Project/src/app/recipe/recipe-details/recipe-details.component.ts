@@ -2,7 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Recipe } from './../recipe.model';
 import {ShoppingServiceService} from '../../shopping-list/shopping-service.service';
-import { Ingridents } from 'src/app/shared/Ingridents.model';
+import { Ingridents } from '../../shared/Ingridents.model';
+
+import { RecipeServiceService } from '../recipe-service.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-details',
@@ -10,14 +13,19 @@ import { Ingridents } from 'src/app/shared/Ingridents.model';
   styleUrls: ['./recipe-details.component.css']
 })
 export class RecipeDetailsComponent implements OnInit {
-@Input() itemEl:Recipe;
-
+//@Input() itemEl:Recipe;
+id:number;
 imageFlag = false;
 imgFlag = true;
-
-  constructor(private shoppingservice:ShoppingServiceService) { }
+itemEl:Recipe;
+  constructor(private shoppingservice:ShoppingServiceService,private route : ActivatedRoute,private recipeservice : RecipeServiceService) { }
 
   ngOnInit() {
+    this.route.params
+    .subscribe((params:Params)=>{
+      this.id = params['id'];
+      this.itemEl = this.recipeservice.getRecipeById(this.id);
+    })
   }
 
   zoom()

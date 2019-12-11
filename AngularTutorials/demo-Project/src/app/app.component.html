@@ -1,8 +1,7 @@
-<div class="container-fluid">
+<div class="container">
 <app-header (loadingOption)="onNavigate($event)"></app-header>
 <div  class="container">
   
-  <app-recipe *ngIf="loadPage === 'recipe'"></app-recipe>
-  <app-shopping-list *ngIf="loadPage === 'shoppingList'"></app-shopping-list>
+  <router-outlet></router-outlet>
 </div>
 </div>

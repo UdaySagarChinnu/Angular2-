@@ -13,6 +13,10 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { BackgroundcolorDirective } from './shared/backgroundcolor.directive';
+import { AppRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipe/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipe/recipe-edit/recipe-edit.component';
+
 
 
 @NgModule({
@@ -26,13 +30,17 @@ import { BackgroundcolorDirective } from './shared/backgroundcolor.directive';
     ShoppingListComponent,
     ShoppingEditComponent,
     DropdownDirective,
-    BackgroundcolorDirective
+    BackgroundcolorDirective,
+    RecipeStartComponent,
+    RecipeEditComponent
 
   ],
   imports: [
-    BrowserModule,
+ 
+  BrowserModule,
     NgxImageZoomModule.forRoot(),
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
