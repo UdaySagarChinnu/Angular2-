@@ -5,7 +5,8 @@ import {ShoppingServiceService} from '../../shopping-list/shopping-service.servi
 import { Ingridents } from '../../shared/Ingridents.model';
 
 import { RecipeServiceService } from '../recipe-service.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, RouterModule,Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-recipe-details',
@@ -18,7 +19,7 @@ id:number;
 imageFlag = false;
 imgFlag = true;
 itemEl:Recipe;
-  constructor(private shoppingservice:ShoppingServiceService,private route : ActivatedRoute,private recipeservice : RecipeServiceService) { }
+  constructor(private routes : Router,private shoppingservice:ShoppingServiceService,private route : ActivatedRoute,private recipeservice : RecipeServiceService) { }
 
   ngOnInit() {
     this.route.params
@@ -43,8 +44,10 @@ itemEl:Recipe;
   addIngridents(ingrident:Ingridents[]){
     console.log("details:",ingrident)
     this.shoppingservice.addSelectedIngridents(ingrident);
+  }
 
-
+  onEditClick(){
+    this.routes.navigate(['edit'],{relativeTo:this.route})
   }
 
 }

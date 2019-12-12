@@ -25,9 +25,9 @@
                 <button type="button" class="btn btn-warning dropdown-toggle"  >Manage Recipe</button>
                
                     <ul   class="dropdown-menu text-center">
-                        <li appBackgroundcolor><a (click)="addIngridents(itemEl.ingridents)" appBackgroundcolor routerLink="/shopping">To Shopping List</a></li>
-                        <li appBackgroundcolor><a  appBackgroundcolor>Edit Recipe</a></li>
-                        <li appBackgroundcolor><a  appBackgroundcolor>Delete Recipe</a></li>
+                        <li appBackgroundcolor><a (click)="addIngridents(itemEl.ingridents)" appBackgroundcolor  routerLinkActive = 'active'  routerLink="/shopping">To Shopping List</a></li>
+                        <li appBackgroundcolor><a (click)="onEditClick()" >Edit Recipe</a></li>
+                        <li appBackgroundcolor><a  >Delete Recipe</a></li>
                     </ul>
                 
             </div>

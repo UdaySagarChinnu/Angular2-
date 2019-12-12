@@ -1,1 +1,24 @@
 <p>recipe-edit works!</p>
+{{index}}--{{recpieItem.name}}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <label for="fruitname">Fruit Name</label>
+        <input type="text" name="fruitname" id="fruitname" class="form-control" #name>
+        <label for="fruitdescription">Fruit Description</label>
+        <input type="text" name="fruitdescription" id="fruitdescription" class="form-control" #description>
+        <label for="fruitimage">Fruit Image</label>
+        <input type="text" name="fruitimage" id="fruitimage" class="form-control" #image>
+        
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-md-2">
+        <button class="btn btn-success">Submit</button>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-danger" (click)="onClear()">Clear</button>
+    </div>
+</div>
