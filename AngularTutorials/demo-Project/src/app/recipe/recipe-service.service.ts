@@ -33,4 +33,8 @@ export class RecipeServiceService {
   getRecipeById(id:number){
     return this.recipeList[id];
   }
+
+  updateRecipe(index:number, changedRecipe:Recipe){
+    this.recipeList[index]=changedRecipe;
+  }
 }

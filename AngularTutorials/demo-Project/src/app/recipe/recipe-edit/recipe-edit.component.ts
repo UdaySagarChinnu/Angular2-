@@ -38,15 +38,18 @@ export class RecipeEditComponent implements OnInit,AfterViewInit {
 
    }
     
-  
+   changeRecipe(){
+    this.recpieItem.name = this.name.nativeElement.value;
+    this.recpieItem.description = this.description.nativeElement.value;
+    this.recpieItem.image = this.image.nativeElement.value;
+    this.recipeService.updateRecipe(this.index,this.recpieItem);
+   }
 
   onClear(){
 
     this.name.nativeElement.value = "";
     this.description.nativeElement.value = ""
     this.image.nativeElement.value = ""
-
-    
   }
 
 }
